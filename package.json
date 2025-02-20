@@ -1,0 +1,59 @@
+{
+  "name": "@folio/stripes-build",
+  "version": "1.0.0",
+  "description": "Stripes Build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/folio-org/stripes-build.git"
+  },
+  "publishConfig": {
+    "registry": "https://repository.folio.org/repository/npm-folio/"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "index.js",
+  "bin": {
+    "stripes-build": "lib/stripes-build.js"
+  },
+  "scripts": {
+    "test": "mocha --recursive",
+    "test:coverage": "nyc --reporter=lcov --reporter=text --report-dir ./artifacts/coverage mocha --recursive",
+    "lint": "eslint ./",
+    "lint-templates": "eslint ./resources --no-ignore",
+    "docs": "node ./lib/doc/generator"
+  },
+  "dependencies": {
+    "@folio/stripes-webpack": "^6.0.0",
+    "configstore": "^3.1.1",
+    "debug": "^4.0.1",
+    "fast-xml-parser": "^4.2.4",
+    "find-up": "^2.1.0",
+    "fs-extra": "^11.1.1",
+    "get-stdin": "^6.0.0",
+    "global-dirs": "^0.1.1",
+    "import-lazy": "^3.1.0",
+    "inquirer": "^8.2.0",
+    "is-installed-globally": "^0.4.0",
+    "is-path-inside": "^1.0.1",
+    "lodash": "^4.17.5",
+    "resolve-from": "^4.0.0",
+    "resolve-pkg": "^1.0.0",
+    "semver": "^7.5.0",
+    "update-notifier": "^6.0.2",
+    "webpack": "^5.80.0",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "yargs": "^17.3.1"
+  },
+  "devDependencies": {
+    "@folio/eslint-config-stripes": "^8.0.0",
+    "babel-plugin-istanbul": "^6.0.0",
+    "chai": "^4.1.2",
+    "eslint": "^7.32.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^15.0.4",
+    "sinon-chai": "^3.7.0"
+  }
+}
