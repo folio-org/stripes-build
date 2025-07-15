@@ -1,8 +1,8 @@
-# Stripes CLI Commands
+# stripes-build Commands
 
-Version 2.5.0
+Version 1.1.0
 
-This following command documentation is generated from the CLI's own built-in help.  Run any command with the `--help` option to view the latest help for your currently installed CLI.  To regenerate this file, run `yarn docs`.
+This following command documentation is generated from the CLI's own built-in help. Run any command with the `--help` option to view the latest help for your currently installed CLI. To regenerate this file, run `yarn docs`.
 
 > Note: Commands labeled "(work in progress)" are incomplete or experimental and subject to change.
 
@@ -29,12 +29,7 @@ Examples:
 
 Show help for the build command:
 ```
-$ stripes build --help
-```
-
-Disable interactive option
-```
-$ stripes app create "Hello World" --no-interactive
+$ stripes-build build --help
 ```
 
 
@@ -64,7 +59,6 @@ Remove alias for ui-users:
 $ stripes alias remove @folio/ui-users
 ```
 
-
 ## `build` command
 
 Build a Stripes tenant bundle
@@ -82,6 +76,7 @@ Positional | Description | Type | Notes
 Option | Description | Type | Notes
 ---|---|---|---
 `--analyze` | Run the Webpack Bundle Analyzer after build (launches in browser) | boolean |
+`--cache` | Use webpack cache | boolean | default: true
 `--createDll` | List of dependencies (comma-separated) to build into a Webpack DLL. | string |
 `--devtool` | Specify the Webpack devtool for generating source maps | string |
 `--dllName` | Name of Webpack DLL to create. | string |
@@ -121,7 +116,6 @@ Build using vendor and stripes DLLs:
 ```
 $ stripes build stripes.config.js --useDll ./path/vendor.json,./path/stripes.json
 ```
-
 
 ## `mod` command
 
@@ -192,9 +186,10 @@ Option | Description | Type | Notes
 `--stripesConfig` | Stripes config JSON  | string | supports stdin
 `--tenant` | Specify a tenant ID | string |
 
+
 ## `completion` command
 
-Generate a bash completion script.  Follow instructions included with the script for adding it to your bash profile.
+Generate a bash completion script. Follow instructions included with the script for adding it to your bash profile.
 
 Usage:
 ```
