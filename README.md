@@ -11,7 +11,6 @@ stripes-build is a CLI for building Stripes UI platforms. It is nothing more tha
 
 * [User Guide](./doc/user-guide.md)
 * [List of Commands](./doc/commands.md)
-* [Troubleshooting](./doc/troubleshooting.md)
 
 ## Installation
 
