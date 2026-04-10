@@ -28,7 +28,7 @@
     "@folio/stripes-webpack": "^7.0.0",
     "configstore": "^3.1.1",
     "debug": "^4.0.1",
-    "fast-xml-parser": "^4.2.4",
+    "fast-xml-parser": "^5.5.8",
     "find-up": "^2.1.0",
     "fs-extra": "^11.1.1",
     "get-stdin": "^6.0.0",
