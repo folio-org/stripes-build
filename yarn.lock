@@ -1222,9 +1222,9 @@
     strip-json-comments "^3.1.1"
 
 "@folio/eslint-config-stripes@^9.0.0":
-  version "9.0.1099000000000053"
-  resolved "https://repository.folio.org/repository/npm-folioci/@folio/eslint-config-stripes/-/eslint-config-stripes-9.0.1099000000000053.tgz#eaaeba14f0b2628e7e219c79498e8c4ce431651c"
-  integrity sha512-9by16K1q3R5C3oExknM2zyr/18ddInMf6tptC/nI0I7O7pgMsutoY2xogOh/CUt32pq9NemXeGkshG63aI7bKg==
+  version "9.0.0"
+  resolved "https://repository.folio.org/repository/npm-folio/@folio/eslint-config-stripes/-/eslint-config-stripes-9.0.0.tgz#f146764510a02b59637806c0511831c9513d0707"
+  integrity sha512-nTwlpfGLp2Bb5nGqyLrGPlunD7nPlCj4pu092TgIQYih+oOEMxC9WyPBTQUZwucod/eJ0XigZP1Oln/WS/nrZQ==
   dependencies:
     "@babel/core" "^7.18.13"
     "@babel/eslint-parser" "^7.15.0"
@@ -1246,9 +1246,9 @@
     webpack "^5.80.0"
 
 "@folio/stripes-webpack@^7.0.0":
-  version "7.0.1099000000000309"
-  resolved "https://repository.folio.org/repository/npm-folioci/@folio/stripes-webpack/-/stripes-webpack-7.0.1099000000000309.tgz#ccc619786196395c9e0e1011f146b45bddb3df1b"
-  integrity sha512-CDhEJYFVRK0FsjK0Q/fIIkZjfb/NXsncyKe5JogXmW/0NwUDuFsVlgDwCiN+/cD2j8CxkfCHAAaRjWurDVpkCA==
+  version "7.0.0"
+  resolved "https://repository.folio.org/repository/npm-folio/@folio/stripes-webpack/-/stripes-webpack-7.0.0.tgz#b6114afa95eaa5d745de369792c54fb5cd38875e"
+  integrity sha512-IpRE8cuqfwaK3Nl5URr0De0Qv7p3meLpcnSqzaAI57cxOMUoOYPV+RHdZd2WQgzCXGgH02mOBULNVbEmXJGjsQ==
   dependencies:
     "@babel/core" "^7.9.0"
     "@babel/plugin-proposal-decorators" "^7.0.0"
