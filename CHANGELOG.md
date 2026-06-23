@@ -1,5 +1,9 @@
 # Change history for stripes-build
 
+## 1.1.1 IN PROGRESS
+
+* Upgrade `webpack` to `^5.104.1`. Refs STCLI-275.
+
 ## [1.1.0](https://github.com/folio-org/stripes-build/tree/v1.1.0) (2026-06-23)
 
 * Upgrade fast-xml-parser from 4 (EOL) to 5.5.8. Refs STCLI-278.
