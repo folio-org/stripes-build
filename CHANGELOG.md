@@ -3,6 +3,7 @@
 ## 1.1.0 IN PROGRESS
 
 * Upgrade fast-xml-parser from 4 (EOL) to 5.5.8. Refs STCLI-278.
+* Upgrade `@folio/stripes-webpack` to `^6.1.0`.
 
 ## [1.0.0](https://github.com/folio-org/stripes-build/tree/v1.0.0) (2025-03-12)
 
