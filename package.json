@@ -42,7 +42,7 @@
     "resolve-pkg": "^1.0.0",
     "semver": "^7.5.0",
     "update-notifier": "^6.0.2",
-    "webpack": "^5.80.0",
+    "webpack": "^5.104.1",
     "webpack-bundle-analyzer": "^4.4.2",
     "yargs": "^17.3.1"
   },
