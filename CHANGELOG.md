@@ -1,6 +1,6 @@
 # Change history for stripes-build
 
-## 1.1.1 IN PROGRESS
+## [1.1.1](https://github.com/folio-org/stripes-build/tree/v1.1.1) (2026-06-23)
 
 * Upgrade `webpack` to `^5.104.1`. Refs STCLI-275.
 
