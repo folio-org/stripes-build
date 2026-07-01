@@ -3,6 +3,7 @@
 ## IN PROGRESS
 
 * Supply Personal Data Disclosure form. Refs STRIPES-980.
+* Supply `mod descriptor --single`. Refs STRIPES-1029.
 
 ## 1.1.0 IN PROGRESS
 
