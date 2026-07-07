@@ -1,13 +1,15 @@
 # Change history for stripes-build
 
-## IN PROGRESS
+## 2.1.0 IN PROGRESS
 
-* Supply Personal Data Disclosure form. Refs STRIPES-980.
 * Supply `mod descriptor --single`. Refs STRIPES-1029.
 
-## 1.1.0 IN PROGRESS
+## [2.0.0](https://github.com/folio-org/stripes-build/tree/v2.0.0) (2026-04-30)
 
+* cleanup docs, change stripes-cli to stripes-build
+* STRIPES-1018 BREAKING bump engines.node to ^22.12.0
 * Upgrade fast-xml-parser from 4 (EOL) to 5.5.8. Refs STCLI-278.
+* Supply Personal Data Disclosure form. Refs STRIPES-980.
 
 ## [1.0.0](https://github.com/folio-org/stripes-build/tree/v1.0.0) (2025-03-12)
 
