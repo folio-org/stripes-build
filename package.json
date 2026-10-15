@@ -13,7 +13,6 @@
   "engines": {
     "node": ">=22.12.0"
   },
-  "main": "index.js",
   "bin": {
     "stripes-build": "lib/stripes-build.js"
   },
@@ -24,7 +23,7 @@
     "docs": "node ./lib/doc/generator"
   },
   "dependencies": {
-    "@folio/stripes-webpack": "^7.0.0",
+    "@folio/stripes-webpack": "^8.0.0",
     "configstore": "^3.1.1",
     "debug": "^4.0.1",
     "fast-xml-parser": "^5.5.8",
@@ -47,7 +46,6 @@
   },
   "devDependencies": {
     "@folio/eslint-config-stripes": "^10.0.0",
-    "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.1.2",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
