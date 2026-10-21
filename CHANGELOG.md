@@ -3,6 +3,7 @@
 ## 2.1.0 IN PROGRESS
 
 * Supply `mod descriptor --single`. Refs STRIPES-1029.
+* Migrate to oxlint. Refs STRIPES-1053.
 
 ## [2.0.0](https://github.com/folio-org/stripes-build/tree/v2.0.0) (2026-04-30)
 
