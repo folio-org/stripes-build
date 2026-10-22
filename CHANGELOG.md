@@ -1,6 +1,6 @@
 # Change history for stripes-build
 
-## 2.1.0 IN PROGRESS
+## 3.0.0 IN PROGRESS
 
 * Supply `mod descriptor --single`. Refs STRIPES-1029.
 * Migrate to oxlint. Refs STRIPES-1053.
