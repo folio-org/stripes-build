@@ -1,6 +1,6 @@
 # stripes-build Commands
 
-Version 1.1.0
+Version 3.0.0
 
 This following command documentation is generated from the CLI's own built-in help. Run any command with the `--help` option to view the latest help for your currently installed CLI. To regenerate this file, run `yarn docs`.
 
@@ -80,6 +80,7 @@ Option | Description | Type | Notes
 `--createDll` | List of dependencies (comma-separated) to build into a Webpack DLL. | string |
 `--devtool` | Specify the Webpack devtool for generating source maps | string |
 `--dllName` | Name of Webpack DLL to create. | string |
+`--federate` | Enables module-federation in build process | boolean | default: false
 `--hasAllPerms` | Set "hasAllPerms" in Stripes config | boolean |
 `--languages` | Languages to include in tenant build | array |
 `--lint` | Show eslint warnings with build | boolean |
@@ -146,6 +147,7 @@ Option | Description | Type | Notes
 ---|---|---|---
 `--full` | Return full module descriptor JSON | boolean | default: false
 `--output` | Directory to write descriptors to as JSON files | string |
+`--single` | Full JSON descriptor for a single module in the current working directory | boolean | default: false
 `--strict` | Include required interface dependencies | boolean | default: false
 `--stripesConfig` | Stripes config JSON  | string | supports stdin
 

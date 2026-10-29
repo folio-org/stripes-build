@@ -11,7 +11,6 @@
         * [CLI context](#cli-context)
         * [Stripes config](#stripes-config)
         * [Standard input](#standard-input)
-        * [Interactive input](#interactive-input)
     * [Grouping](#grouping)
 * [Logging](#logging)
 * [Okapi Client](#okapi-client)
@@ -173,7 +172,7 @@ handler: myCommand,
 
 The CLI supports middleware for additional handling of `argv` prior to invoking a command.  One or more middleware functions can applied to the Yargs builder.  See the Yargs [middleware documentation](https://github.com/yargs/yargs/blob/master/docs/advanced.md#middleware) for more details.
 
-Several useful middleware functions are included with the CLI for loading context, parsing standard input, and prompting the user for input.
+Several useful middleware functions are included with the CLI for loading context and parsing standard input.
 
 #### CLI context
 
@@ -281,62 +280,6 @@ module.exports = {
   },
   handler: myCommand,
 };
-```
-
-#### Interactive input
-
-When answers to questions can be acquired up front, the simplest way to ask for them is to apply the CLI's `promptMiddleware` from `lib/cli/prompt-middleware`.  When invoked, this middleware will check the incoming `argv` prompt the user for any options which were not provided on the command line.  Internally the middleware uses Inquirer to prompt the user with questions.
-
-This example will prompt for a name before running command's hander:
-
-```javascript
-// Lazy load to improve startup time
-const importLazy = require('import-lazy')(require);
-const { promptMiddleware } = importLazy('../cli/prompt-middleware');
-
-// The command itself
-function myCommand(argv) {
-  console.log(`Hello ${argv.name}!`);
-}
-
-// Used to share option details between promptMiddleware and yargs builder
-const myOptions = {
-  name: {
-    describe: 'A name to say hello to',
-    type: 'string',
-  }
-}
-
-// Yargs command module with a builder function
-module.exports = {
-  command: 'hello',
-  describe: 'A very basic command',
-  builder: (yargs) => {
-    yargs
-      .middleware([
-        promptMiddleware(myOptions),  // <--- provide object of option(s) for user prompts
-      ])
-      .option('name', myOptions.name)
-      .example('$0 hello', 'Prompt for name and then say hello.');
-  },
-  handler: myCommand,
-};
-```
-
-Yargs options and Inquirer questions do not have fully compatible structures.  When a CLI option is also used as an interactive question, avoid duplication by using the CLI's `yargsToInquirer()` helper.  This is automatically invoked by `promptMiddleware`.
-
-Any Inquirer question settings that do not have a Yargs option equivalent can be defined in an `inquirer` property.  In the following example, Yargs has no equivalent for the `password` type or `mask` setting.  The `yargsToInquirer()` helper will apply any inquirer-specific options after conversion.
-
-```javascript
-password: {
-  type: 'string',
-  describe: 'Okapi tenant password',
-  group: 'Okapi Options:',
-  inquirer: {
-    type: 'password',
-    mask: '*',
-  },
-},
 ```
 
 ### Grouping
