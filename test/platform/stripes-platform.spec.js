@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import path from 'path';
 import webpackCommon from '../../lib/webpack-common.js';
 import StripesPlatform from '../../lib/platform/stripes-platform.js';

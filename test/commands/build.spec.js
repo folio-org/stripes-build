@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import buildAppCommand from '../../lib/commands/build.js';
 import webpackCommonMod from '../../lib/webpack-common.js';
 

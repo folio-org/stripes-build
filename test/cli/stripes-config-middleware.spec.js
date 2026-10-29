@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import path from 'path';
 import stdin from '../../lib/cli/stdin.js';
 import stripesConfigMiddlewareMod from '../../lib/cli/stripes-config-middleware.js';
