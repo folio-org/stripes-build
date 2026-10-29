@@ -75,4 +75,86 @@ describe('The app create command', function () {
     expect(buildAppCommand.handler).to.have.been.calledOnce;
     expect(stripesCoreStub.api.build).to.have.been.calledWith(tenantConfig, expectedArgs);
   });
+
+  describe('handler options', function () {
+    beforeEach(function () {
+      this.warn = this.sandbox.stub(console, 'warn');
+      this.sut.stripesOverrides(platformStub, stripesCoreStub);
+      this.sandbox.stub(process, 'exit');
+      this.sandbox.stub(platformStub, 'getWebpackOverrides').returns([]);
+      this.overrides = () => stripesCoreStub.api.build.lastCall.args[1].webpackOverrides;
+    });
+
+    afterEach(function () {
+      delete process.env.NODE_ENV;
+      process.env.NODE_ENV = 'test';
+    });
+
+    it('defaults NODE_ENV to production', function () {
+      delete process.env.NODE_ENV;
+      this.sut.handler(this.argv);
+      expect(process.env.NODE_ENV).to.equal('production');
+    });
+
+    it('does not build in dev mode', function () {
+      this.sut.handler({ ...this.argv, dev: true });
+      expect(stripesCoreStub.api.build).not.to.have.been.called;
+    });
+
+    it('warns when building a platform without a stripes config', function () {
+      this.argv.context.isPlatform = true;
+      this.sut.handler(this.argv);
+      expect(this.warn).to.have.been.calledWithMatch('Building a platform without a stripes configuration');
+    });
+
+    it('does not warn when federating', function () {
+      this.argv.context.isPlatform = true;
+      this.sut.handler({ ...this.argv, federate: true });
+      expect(this.warn).not.to.have.been.called;
+    });
+
+    it('adds the bundle analyzer override', async function () {
+      await this.sut.handler({ ...this.argv, analyze: true });
+      expect(this.overrides()).to.have.length(1);
+      const config = this.overrides()[0]({ plugins: [] });
+      expect(config.plugins).to.have.length(1);
+    });
+
+    it('adds the lint override', function () {
+      this.sut.handler({ ...this.argv, lint: true });
+      expect(this.overrides()).to.have.length(1);
+    });
+
+    it('adds the chunk limit override', function () {
+      this.sut.handler({ ...this.argv, maxChunks: 3 });
+      expect(this.overrides()).to.have.length(1);
+    });
+
+    it('adds the plugin beforeBuild override', function () {
+      const hook = () => {};
+      const beforeBuild = this.sandbox.stub().returns(hook);
+      this.argv.context.plugin = { beforeBuild };
+      this.sut.handler(this.argv);
+      expect(beforeBuild).to.have.been.calledOnce;
+      expect(this.overrides()).to.deep.equal([hook]);
+    });
+
+    it('skips the stripes config when skipStripesBuild is set', function () {
+      this.sut.handler({ ...this.argv, skipStripesBuild: true });
+      expect(stripesCoreStub.api.build.lastCall.args[0]).to.equal(null);
+    });
+  });
+
+  describe('builder', function () {
+    it('configures yargs with options and examples', function () {
+      const yargs = {};
+      for (const m of ['middleware', 'positional', 'option', 'options', 'example']) {
+        yargs[m] = this.sandbox.stub().returns(yargs);
+      }
+      this.sut.builder(yargs);
+      expect(yargs.middleware).to.have.been.calledOnce;
+      expect(yargs.option.callCount).to.be.greaterThan(5);
+      expect(yargs.example).to.have.callCount(5);
+    });
+  });
 });
