@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import stdin from '../../lib/cli/stdin.js';
 import stdinMiddleware from '../../lib/cli/stdin-middleware.js';
 

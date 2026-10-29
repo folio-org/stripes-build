@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import webpackCommon from '../lib/webpack-common.js';
 
 const expect = chaiMod.expect;

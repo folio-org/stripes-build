@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import context from '../../lib/cli/context.js';
 import contextMiddleware from '../../lib/cli/context-middleware.js';
 

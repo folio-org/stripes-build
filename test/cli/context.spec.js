@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import fs from 'fs';
 import path from 'path';
 import context from '../../lib/cli/context.js';
