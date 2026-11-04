@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import PlatformStorage from '../../lib/platform/platform-storage.js';
 
 const expect = chaiMod.expect;

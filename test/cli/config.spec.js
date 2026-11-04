@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -23,7 +23,7 @@ describe('The CLI config module', function () {
 
   it('uses empty defaults when no config file is found', async function () {
     const { default: config } = await freshImport();
-    expect(config.configPath).to.equal(null);
+    expect(config.configPath).to.equal(undefined);
     expect(config.plugins).to.equal(undefined);
     expect(config.commandDirOptions).to.deep.equal({});
   });

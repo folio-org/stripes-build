@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import path from 'node:path';
 import fs from 'node:fs';
 import os from 'node:os';

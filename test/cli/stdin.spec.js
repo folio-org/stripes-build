@@ -1,4 +1,4 @@
-import chaiMod from 'chai';
+import * as chaiMod from 'chai';
 import stdin from '../../lib/cli/stdin.js';
 
 const expect = chaiMod.expect;

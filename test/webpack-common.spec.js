@@ -1,5 +1,6 @@
 import * as chaiMod from 'chai';
 import webpackCommon from '../lib/webpack-common.js';
+import webpack from 'webpack';
 
 const expect = chaiMod.expect;
 
