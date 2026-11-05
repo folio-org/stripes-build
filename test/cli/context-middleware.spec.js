@@ -1,6 +1,7 @@
-const expect = require('chai').expect;
-const context = require('../../lib/cli/context');
-const contextMiddleware = require('../../lib/cli/context-middleware');
+import { expect } from 'chai';
+import context from '../../lib/cli/context.js';
+import contextMiddleware from '../../lib/cli/context-middleware.js';
+
 
 const contextStub = {
   moduleName: 'myModule',

@@ -5,6 +5,7 @@
 * Supply `mod descriptor --single`. Refs STRIPES-1029.
 * Migrate to oxlint. Refs STRIPES-1053.
 * *BREAKING* Drop `babelOptions` export. Refs STRIPES-1054.
+* Convert from CommonJS to ESM. Refs STRIPES-1058.
 
 ## [2.0.0](https://github.com/folio-org/stripes-build/tree/v2.0.0) (2026-04-30)
 
