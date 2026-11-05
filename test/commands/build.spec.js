@@ -2,7 +2,6 @@ import { expect } from 'chai';
 import buildAppCommand from '../../lib/commands/build.js';
 import webpackCommonMod from '../../lib/webpack-common.js';
 
-
 const { ignoreCache } = webpackCommonMod;
 
 const packageJsonStub = {};

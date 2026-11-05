@@ -1,7 +1,6 @@
 import { expect } from 'chai';
 import stdin from '../../lib/cli/stdin.js';
 
-
 describe('The stdin wrapper', function () {
   afterEach(function () {
     delete process.stdout.isTTY;

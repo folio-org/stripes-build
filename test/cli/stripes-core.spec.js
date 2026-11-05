@@ -4,7 +4,6 @@ import fs from 'node:fs';
 import os from 'node:os';
 import StripesCore from '../../lib/cli/stripes-core.js';
 
-
 describe('The StripesCore class', function () {
   beforeEach(function () {
     this.tmp = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), 'stripes-core-')));
