@@ -1,9 +1,7 @@
-import * as chaiMod from 'chai';
+import { expect } from 'chai';
 import path from 'path';
 import webpackCommon from '../../lib/webpack-common.js';
 import StripesPlatform from '../../lib/platform/stripes-platform.js';
-
-const expect = chaiMod.expect;
 
 const stripesConfigStub = {
   okapi: {
