@@ -1,10 +1,9 @@
-import chaiMod from 'chai';
+import { expect } from 'chai';
 import path from 'node:path';
 import fs from 'node:fs';
 import os from 'node:os';
 import StripesCore from '../../lib/cli/stripes-core.js';
 
-const expect = chaiMod.expect;
 
 describe('The StripesCore class', function () {
   beforeEach(function () {

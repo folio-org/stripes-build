@@ -1,7 +1,6 @@
-import chaiMod from 'chai';
+import { expect } from 'chai';
 import PlatformStorage from '../../lib/platform/platform-storage.js';
 
-const expect = chaiMod.expect;
 
 // In-memory stand-in for Configstore so tests never touch the real config file
 function fakeConfig() {

@@ -1,8 +1,7 @@
-import chaiMod from 'chai';
+import { expect } from 'chai';
 import childProcess from 'node:child_process';
 import path from 'node:path';
 
-const expect = chaiMod.expect;
 
 // global-dirs runs its Windows fix-up at import time, so each case re-imports a fresh copy
 let counter = 0;

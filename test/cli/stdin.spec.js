@@ -1,7 +1,6 @@
-import chaiMod from 'chai';
+import { expect } from 'chai';
 import stdin from '../../lib/cli/stdin.js';
 
-const expect = chaiMod.expect;
 
 describe('The stdin wrapper', function () {
   afterEach(function () {

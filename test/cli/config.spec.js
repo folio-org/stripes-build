@@ -1,9 +1,8 @@
-import chaiMod from 'chai';
+import { expect } from 'chai';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-const expect = chaiMod.expect;
 
 // config.js reads the CLI config at import time, so each case re-imports a fresh copy from a temp cwd
 let counter = 0;
