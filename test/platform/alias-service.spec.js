@@ -1,12 +1,10 @@
 import { expect } from 'chai';
-import sinonMod from 'sinon';
+import { match } from 'sinon';
 import fs from 'fs';
 import path from 'path';
 import cliConfig from '../../lib/cli/config.js';
 import AliasService from '../../lib/platform/alias-service.js';
 import AliasError from '../../lib/platform/alias-error.js';
-
-const match = sinonMod.match;
 
 const storageStub = {
   getAllAliases: () => {},
