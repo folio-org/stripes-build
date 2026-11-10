@@ -1,7 +1,6 @@
 import { expect } from 'chai';
 import PlatformStorage from '../../lib/platform/platform-storage.js';
 
-
 // In-memory stand-in for Configstore so tests never touch the real config file
 function fakeConfig() {
   const data = new Map();

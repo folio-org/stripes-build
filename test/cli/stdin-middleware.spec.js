@@ -2,7 +2,6 @@ import { expect } from 'chai';
 import stdin from '../../lib/cli/stdin.js';
 import stdinMiddleware from '../../lib/cli/stdin-middleware.js';
 
-
 describe('The stdin-middleware module', function () {
   beforeEach(function () {
     this.sut = stdinMiddleware;

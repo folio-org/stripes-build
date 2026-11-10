@@ -3,7 +3,6 @@ import path from 'path';
 import webpackCommon from '../../lib/webpack-common.js';
 import StripesPlatform from '../../lib/platform/stripes-platform.js';
 
-
 const stripesConfigStub = {
   okapi: {
     url: 'http://localhost:9130',

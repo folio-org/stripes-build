@@ -2,7 +2,6 @@ import { expect } from 'chai';
 import context from '../../lib/cli/context.js';
 import contextMiddleware from '../../lib/cli/context-middleware.js';
 
-
 const contextStub = {
   moduleName: 'myModule',
   isUiModule: true,

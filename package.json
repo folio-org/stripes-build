@@ -25,30 +25,29 @@
   },
   "dependencies": {
     "@folio/stripes-webpack": "^8.0.0",
-    "configstore": "^3.1.1",
+    "configstore": "^8.0.0",
     "debug": "^4.0.1",
     "fast-xml-parser": "^5.5.8",
-    "find-up": "^2.1.0",
+    "find-up": "^8.0.0",
     "fs-extra": "^11.1.1",
-    "get-stdin": "^6.0.0",
-    "global-dirs": "^0.1.1",
-    "is-installed-globally": "^0.4.0",
-    "is-path-inside": "^1.0.1",
+    "get-stdin": "^10.0.0",
+    "global-dirs": "4",
+    "is-installed-globally": "^1.0.1",
+    "is-path-inside": "^4.0.0",
     "lodash": "^4.17.5",
-    "resolve-from": "^4.0.0",
-    "resolve-pkg": "^1.0.0",
+    "resolve-from": "^5.0.0",
+    "resolve-pkg": "^3.0.1",
     "semver": "^7.5.0",
-    "update-notifier": "^6.0.2",
-    "webpack": "^5.104.1",
-    "webpack-bundle-analyzer": "^4.4.2",
-    "yargs": "^17.3.1"
+    "webpack": "^5.112.2",
+    "webpack-bundle-analyzer": "^5.4.0",
+    "yargs": "^18.2.0"
   },
   "devDependencies": {
     "@folio/eslint-config-stripes": "^10.0.0",
     "c8": "^12.0.0",
-    "chai": "^4.1.2",
-    "mocha": "^10.2.0",
-    "sinon": "^15.0.4",
-    "sinon-chai": "^3.7.0"
+    "chai": "^6.3.0",
+    "mocha": "^12.0.3",
+    "sinon": "^22.1.0",
+    "sinon-chai": "^4.0.1"
   }
 }
